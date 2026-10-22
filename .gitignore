@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# 数据与临时文件（大体积原始数据不入库，清洗结果保留）
+*.xlsx
+*.xls
+raw_data/
+*.tmp
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 敏感信息
+*.token
+*.key
+.env
