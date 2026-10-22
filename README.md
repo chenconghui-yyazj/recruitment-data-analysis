@@ -1,76 +1,82 @@
-# 上市公司招聘大数据：人才需求变化分析与就业趋势研判
+# Listed-Company Recruitment Big Data: Talent Demand Analysis & Employment Trend Study
 
-> 基于 2014—2026 年上市公司招聘大数据，通过数据治理、多维特征分析与趋势研判，揭示行业 / 城市 / 学历 / 岗位的人才需求结构与变化规律，为高校培养、学生择业与企业人才配置提供数据支撑。
+> An end-to-end data analysis project on listed-company recruitment data (2014–2026): data governance → multi-dimensional analysis → trend forecasting → visualization → practical applications, revealing the structure and evolution of talent demand across industries, cities, education levels, and job categories.
 
-## 📌 项目简介
+> **🌐 Bilingual** · This is the **English** version (primary). 中文版见 [`README_中文.md`](README_中文.md) / Chinese version available in [`README_中文.md`](README_中文.md).
 
-本项目围绕「上市公司招聘大数据」展开一次完整的数据分析与应用研究，覆盖**数据治理 → 特征分析 → 趋势研判 → 可视化 → 应用价值**全流程。数据来自上市公司招聘信息，包含岗位类别、学历要求、薪资水平、工作地点、行业分布、发布时间等多维信息。
+## 📌 About the Project
 
-清洗后数据集共 **323,828 条**有效招聘记录、**10 个**标准化字段。
+This project conducts a complete data-analysis and applied-research workflow on **listed-company recruitment big data**, covering **Data Governance → Feature Analysis → Trend Forecasting → Visualization → Application Value**. The data includes multi-dimensional information such as job category, education requirement, salary level, work location, industry distribution, and publish time.
 
-## 🎯 项目目标（对应赛题三项任务）
+The cleaned dataset contains **323,818** valid job records with **10** standardized fields.
 
-| 任务 | 内容 |
+## 🎯 Objectives (corresponding to the three competition tasks)
+
+| Task | Content |
 | --- | --- |
-| ① 数据整理与治理 | 清洗、去重、缺失值处理、异常值识别、字段标准化 |
-| ② 招聘需求特征分析 | 行业需求差异、地区岗位分布、学历结构、职位类别、时间趋势 |
-| ③ 热点岗位与变化研究 | 结合时间维度识别增长最快的岗位、活跃行业/地区、学历技能变化 |
+| ① Data Cleaning & Governance | Cleaning, deduplication, missing-value handling, outlier detection, field standardization |
+| ② Demand Feature Analysis | Industry differences, regional distribution, education structure, job categories, time trends |
+| ③ Hot Jobs & Demand Changes | Identify fastest-growing jobs, active industries/regions, education & skill changes over time |
 
-## 🛠 技术栈
+## 🛠 Tech Stack
 
 - **Python 3** + pandas / numpy / scipy / matplotlib / seaborn
-- **Streamlit** 交互式可视化看板
-- **Matplotlib / Seaborn** 静态分析图表
+- **Streamlit** interactive visualization dashboard
+- **Matplotlib / Seaborn** static analysis charts
 
-## 📁 目录结构
+## 📁 Repository Structure
 
 ```
-招聘数据分析作品集/
-├── README.md                    # 项目总览（本文件）
-├── 数据分析报告.md              # 完整分析报告：背景、方法、结论、建议
-├── 数据清洗说明文档.md          # 数据治理过程的详细说明
-├── requirements.txt             # 运行依赖
+recruitment-data-analysis/
+├── README.md                    # Project overview — English (this file)
+├── README_中文.md               # Project overview — Chinese version
+├── 数据分析报告.md              # Analysis report — English (primary)
+├── 数据分析报告_中文.md         # Analysis report — Chinese version
+├── 数据清洗说明文档.md          # Data cleaning documentation — English
+├── 数据清洗说明文档_中文.md     # Data cleaning documentation — Chinese
+├── requirements.txt             # Dependencies
 ├── data/
-│   └── 招聘数据_清洗后.csv      # 清洗后的分析数据集（323,828 条）
+│   └── recruitment_data_cleaned.csv   # Cleaned dataset (323,818 records)
 ├── code/
-│   ├── data_cleaning.py         # 数据清洗与分析主脚本
-│   └── dashboard.py             # Streamlit 交互式分析看板
-├── images/                      # 分析结果图表
+│   ├── data_cleaning.py         # Data cleaning & analysis main script
+│   ├── dashboard.py             # Streamlit interactive dashboard
+│   └── generate_charts.py       # Chart generation script
+├── images/                      # Analysis charts (English titles)
 └── docs/
-    └── 赛题说明.pdf             # 官方任务书
+    └── task_description.pdf     # Official competition task description
 ```
 
-## 💡 项目亮点 / 核心结论
+## 💡 Highlights / Key Findings
 
-- **数据治理规范**：IQR 法剔除薪资异常、缺失值与重复记录清理、字段标准化，数据保留率与质量可量化追溯。
-- **多维特征刻画**：行业 / 城市 / 学历 / 岗位四大维度的需求结构全景呈现。
-- **趋势研判**：结合时间维度识别热点岗位与人才需求变化方向。
-- **可视化交互**：Streamlit 看板支持按行业、城市实时筛选，直观支撑结论。
+- **Rigorous data governance**: IQR-based salary outlier removal, missing-value & duplicate handling, field standardization — fully reproducible.
+- **Multi-dimensional insights**: panoramic view of industry / city / education / job demand structure.
+- **Trend forecasting**: identifies hot jobs and talent-demand shifts over time.
+- **Interactive visualization**: Streamlit dashboard with real-time filtering by industry & city.
 
-## ▶️ 如何运行
+## ▶️ How to Run
 
 ```bash
-# 1. 安装依赖
+# 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. 运行数据分析（生成清洗报告与图表）
+# 2. Run data analysis (generates cleaning report & charts)
 python code/data_cleaning.py
 
-# 3. 启动交互式看板
+# 3. Launch interactive dashboard
 streamlit run code/dashboard.py
 ```
 
-> 说明：`data_cleaning.py` 完整运行需读取原始招聘大数据（数据量较大）；`data/招聘数据_清洗后.csv` 为已治理可直接分析的结果数据。
+> Note: `data_cleaning.py` requires the full raw recruitment dataset to run; `data/recruitment_data_cleaned.csv` is the cleaned result ready for analysis.
 
-## 📈 效果预览
+## 📈 Preview
 
-（图表见 `images/` 目录，可查看行业 / 城市 / 学历 / 薪资等维度分析结果）
+Analysis charts are available in the `images/` directory (industry, city, education, salary, job category, etc.).
 
-## ✍️ 作者
+## ✍️ Author
 
-**陈聪惠** · 广州商学院 大数据管理与应用专业
-数据分析 / 数据可视化方向 · 求职作品集项目 #1
+**Chen Conghui (陈聪惠)** · Guangzhou Business School · Big Data Management & Application
+Data Analysis / Data Visualization · Portfolio Project #1
 
 ---
 
-*项目基于赛事赛题独立完成，代码与数据处理过程完整开源。*
+*Project completed independently based on a competition task. Code and data processing are fully open-sourced.*
