@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈聪惠 · 数据分析作品集</title>
+<style>
+  /* ==== 方案三配色：极简雾蓝白 ==== */
+  :root{
+    --bg:#FFFFFF;    /* 页面背景：纯白 */
+    --card:#EEF3F8;  /* 卡片背景：浅雾蓝 */
+    --primary:#A8C0D6;/* 主色：雾蓝 */
+    --accent:#5A7D9C;/* 强调色：深雾蓝 */
+    --text:#333333;  /* 正文文字 */
+    --muted:#6B7A8D; /* 次要文字 */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Microsoft YaHei",-apple-system,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.9;
+  }
+  .container{max-width:880px;margin:0 auto;padding:70px 24px}
+  .hero{text-align:center;padding-bottom:36px}
+  .hero h1{font-size:32px;font-weight:600;color:var(--text)}
+  .hero p{color:var(--muted);margin-top:10px;font-size:15px}
+  .card{
+    background:var(--card);border-radius:12px;padding:22px;
+    margin-bottom:18px;
+  }
+  .card h2{font-size:17px;color:var(--accent);margin-bottom:10px}
+  .card p{font-size:14px;color:var(--muted)}
+  .card img{width:100%;border-radius:8px;margin-top:12px;display:block}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- 标题区 -->
+  <div class="hero">
+    <h1>陈聪惠</h1>
+    <p>数据分析 · 数据可视化 · 求职作品集 #1</p>
+  </div>
+
+  <!-- 项目简介 -->
+  <div class="card">
+    <h2>项目简介</h2>
+    <p>基于上市公司招聘大数据的人才需求变化分析与就业趋势研判。</p>
+  </div>
+
+  <!-- 6 张分析图 -->
+  <div class="card">
+    <h2>行业招聘量 Top10</h2>
+    <img src="images/industry_top10.png" alt="行业招聘量Top10">
+  </div>
+  <div class="card">
+    <h2>城市招聘量 Top10</h2>
+    <img src="images/city_top10.png" alt="城市招聘量Top10">
+  </div>
+  <div class="card">
+    <h2>学历要求分布</h2>
+    <img src="images/education_distribution.png" alt="学历要求分布">
+  </div>
+  <div class="card">
+    <h2>高薪行业 Top10</h2>
+    <img src="images/salary_top_industries.png" alt="高薪行业Top10">
+  </div>
+  <div class="card">
+    <h2>岗位需求 Top10</h2>
+    <img src="images/job_category_top10.png" alt="岗位需求Top10">
+  </div>
+  <div class="card">
+    <h2>薪资分布</h2>
+    <img src="images/salary_distribution.png" alt="薪资分布">
+  </div>
+</div>
+</body>
+</html>
